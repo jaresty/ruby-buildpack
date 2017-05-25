@@ -1,6 +1,8 @@
-#!/usr/bin/env ruby
+#!/bin/bash
+set -euo pipefail
 
-require 'pathname'
+BUILD_DIR=$1
 
-release = Pathname.new(ARGV.first).join("tmp/ruby-buildpack-release-step.yml")
-puts release.read if release.exist?
+if [ -f "$BUILD_DIR/tmp/ruby-buildpack-release-step.yml" ]; then
+  cat "$BUILD_DIR/tmp/ruby-buildpack-release-step.yml"
+fi
