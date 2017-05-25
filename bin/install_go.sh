@@ -2,8 +2,8 @@
 set -euo pipefail
 
 if [ ! -f $CACHE_DIR/go/bin/go ]; then
-  GO_VERSION="1.8.1"
-  GO_MD5="b05c0cbb28503d038a47d87a6b3b8e86"
+  GO_VERSION="1.8.2"
+  GO_MD5="7d07b646a224783433efc7fe716648f7"
   URL=https://buildpacks.cloudfoundry.org/dependencies/go/go${GO_VERSION}.linux-amd64-${GO_MD5:0:8}.tar.gz
 
   echo "-----> Download go ${GO_VERSION}"
