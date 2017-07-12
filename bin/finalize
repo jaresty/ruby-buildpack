@@ -57,3 +57,4 @@ rescue Exception => e
     raise e
   end
 end
+puts Thread.current[:out].string
